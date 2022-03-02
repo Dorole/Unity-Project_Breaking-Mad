@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BreakingMad
@@ -13,9 +11,14 @@ namespace BreakingMad
         Rigidbody2D _rb;
         bool _isLaunched = false;
 
+        //move elsewhere
+        [SerializeField] AudioClip[] _ballSounds;
+        AudioSource _sound;
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _sound = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -45,6 +48,18 @@ namespace BreakingMad
                 _isLaunched = true;
                 _rb.velocity = _launchVector;
             }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (_isLaunched)
+                PlayRandomSound();
+        }
+
+        void PlayRandomSound()
+        {
+            AudioClip clip = _ballSounds[Random.Range(0, _ballSounds.Length)];
+            _sound.PlayOneShot(clip);
         }
     }
 }
