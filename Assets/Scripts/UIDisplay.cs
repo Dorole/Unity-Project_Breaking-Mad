@@ -15,17 +15,17 @@ namespace BreakingMad
             _gameStatus = FindObjectOfType<ScoreKeeper>();
 
             Block.onBlockDestroyed += UpdateScore;
-            LevelLoader.onGameRestarted += DisplayScore;
+            LevelLoader.onGameRestarted += ResetScore;
         }
 
         void UpdateScore(int notUsed)
         {
-            _scoreText.text = _gameStatus.Score.ToString("0000");
+            _scoreText.text = _gameStatus.Score.ToString("000000000");
         }
 
-        void DisplayScore()
+        void ResetScore()
         {
-            _scoreText.text = _gameStatus.Score.ToString("0000");
+            _scoreText.text = _gameStatus.Score.ToString("000000000");
         }
     }
 }

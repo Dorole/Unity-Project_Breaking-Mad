@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 6200000, guid: 6d75445890749364dafa499a64b3bfba, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _paddle: {fileID: 0}
   _launchVector: {x: 2, y: 15}
+  _randomFactor: 1
   _ballSounds:
   - {fileID: 8300000, guid: c40269e681bf94e498307b628ec22479, type: 3}
   - {fileID: 8300000, guid: c49a6ee4d3a704342aebc108e0c7355f, type: 3}

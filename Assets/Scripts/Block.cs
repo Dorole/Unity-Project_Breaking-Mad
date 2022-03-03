@@ -40,7 +40,15 @@ namespace BreakingMad
         void ChangeHitSprite()
         {
             int spriteIndex = _timesHit - 1;
-            _renderer.sprite = _hitSprites[spriteIndex];
+            try
+            { 
+                _renderer.sprite = _hitSprites[spriteIndex];
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning("Block sprite is missing from array" + gameObject.name);
+                return;
+            }
         }
 
         void DestroyBlock()

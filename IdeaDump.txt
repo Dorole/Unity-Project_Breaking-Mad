@@ -1,0 +1,38 @@
+ScriptableObjects for different features or levels? Research how this would work!
+
+Maybe stick to a color scheme - blocks with higher damage level have consistent color
+
+Use circular colliders on blocks? 
+
+Show points overall and points per level. 
+Points per level get added to points overall after the level is cleared.
+Show CLEARED text and maybe sound (someone saying CLEARED!)
+After each level offer to retry the level or restart everything.
+
+https://www.gamasutra.com/view/feature/1630/breaking_down_breakout_system_and_.php?print=1
+
+Ideas for blocks and paddles:
+- secret block that ends the level
+- stationary paddle that gives you speed
+- stationary paddle that slows you down
+- moving paddle (NPC) that gives you crazy points, then disappears
+- stationary paddle that makes the ball transparent for some time
+- block that makes the paddle/ball smaller
+- block that makes the paddle wider
+- (unbreakable?) block that rotates the camera slowly 360 once or twice
+
+Ideas for levels:
+- two paddles, one up, one down, controlled at the same time, one ball
+- two paddles, two balls
+- four paddles, one ball
+- four paddles, two balls
+- time challenge
+- paddle that shrinks over time
+- paddle that shrinks every time you hit it
+- slow ball - fast ball
+- blocks that hide behind other blocks
+- snow or confetti lower visibility
+- camera is swinging?
+
+
+
